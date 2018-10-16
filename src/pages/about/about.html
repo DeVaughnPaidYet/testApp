@@ -1,11 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+<ion-card (tap)="tapEvent($event)">
+  <ion-item>
+    Tapped: {{tap}} times
+  </ion-item>
+</ion-card>
 
+<ion-list>
+	<button ion-button block color="secondary" (click)="openModal()">Charge</button>
+	<button ion-button block color="danger" (click)="openModal()">Request</button>
+	<button ion-button block color="light" (click)="openModal()">Reports</button>
+	<button ion-button block color="dark" (click)="openModal()">Settings</button>
+</ion-list>
 </ion-content>
+
